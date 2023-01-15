@@ -18,7 +18,24 @@
 ## 📦 Repository
 자바 책을 통해 스터디를 진행하는 레포지토리 입니다.
 
+<br>
 
+## 📙 전공 서적
+<img width="200" alt="스크린샷 2023-01-15 오후 8 20 35" src="https://user-images.githubusercontent.com/106949598/212537687-eae18578-c060-471b-a14c-2227b0e264ac.png">
+
+* 저자 : 남궁 성
+
+<br>
+
+### Chapter
+* Chapter 1 : 자바를 시작하기 전에
+* Chapter 2 : 변수 (Variable)
+* Chapter 3 : 연산자 (Operator)
+* Chapter 4 : 조건문과 반복문
+* Chapter 5 : 배열 (Array)
+* Chapter 6 : OOP(1)
+* Chapter 7 : OOP(2)
+* Chapter 8 : 예외처리 (Exception Handling)
 
 
 <br>
