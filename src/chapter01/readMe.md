@@ -31,7 +31,6 @@
     <br><br>
   - 자동 메모리 관리(Garbage Collection)
       - 자바로 작성된 프로그램 실행 → 가비지컬렉터 자동 실행
-  <br>
         ⇒ 프로그래머가 따로 메모리 관리를 하지 않아도 된다
   <br>
       - 자동으로 관리한다는 것이 비효율적인 면도 있지만, 프로그래밍에 집중할 수 있게 도와준다
@@ -64,6 +63,7 @@
     - ‘public static void main (String[] args)’는 main메소드의 선언부
 <br>
       ⇒ 프로그램을 실행할 때 ‘java.exe’에 의해 호출될 수 있도록 미리 약속된 부분이므로 항상 적어줘야 한다
+    
 ```java
  class 클래스이름{
     public static void main (String[] args) //main메소드의 선언부
