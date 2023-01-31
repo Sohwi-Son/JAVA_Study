@@ -63,7 +63,11 @@
     - ‘public static void main (String[] args)’는 main메소드의 선언부
 <br>
       ⇒ 프로그램을 실행할 때 ‘java.exe’에 의해 호출될 수 있도록 미리 약속된 부분이므로 항상 적어줘야 한다
+<<<<<<< HEAD
     
+=======
+      
+>>>>>>> 490ff49b3a94c7f83c477467af854f072a9aeece
 ```java
  class 클래스이름{
     public static void main (String[] args) //main메소드의 선언부
