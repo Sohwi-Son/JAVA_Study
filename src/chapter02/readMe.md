@@ -172,4 +172,63 @@
             ```
 
 - 형식화된 출력 printf()
-  - 
+    - 지시자를 통해 변수를 원하는 형식으로 출력할 수 있다
+    - 출력 후 줄바꿈을 하지 않기 때문에 줄바꿈을 하려면 %n을 따로 넣어줘야한다
+  
+    ~~~ java
+    System.out.printf("age:%d year:%d", age, year);
+    -> System.out.printf("age:%d year:%d", 21, 2023);
+    ~~~
+
+    ~~~java
+    package chapter02.PrintfEx1;
+
+    class PrintfEx1 {
+        public static void main(String[] args){
+            byte b = 1;
+            short s = 2;
+            char c = 'A';
+
+            int finger = 10;
+            long big = 100_000_000_000L; // long big = 100000000000
+            long hex = 0xFFFF_FFFF_FFFF_FFFFL;
+
+            int octNum = 010;
+            int hexNum = 0x10;
+            int binNum = 0b10;
+
+            System.out.printf("b=%d%n",b);
+            System.out.printf("s=%d%n",s);
+            System.out.printf("c=%c, %d %n", c, (int)c);
+            System.out.printf("finger=[%5d] %n", finger);
+            System.out.printf("finger=[%-5d] %n", finger);
+            System.out.printf("finger=[%05d] %n", finger);
+            System.out.printf("big=%d %n", big);
+            System.out.printf("hex=%#x %n", hex);
+            System.out.printf("octNum=%o %d%n", octNum , octNum);
+            System.out.printf("hexNum=%x, %d%n", hexNum, hexNum);
+            System.out.printf("binNum=%s, %d%n", Integer.toBinaryString(binNum), binNum);
+        }
+    }
+    ~~~
+
+  - ‘ _ ‘ 와 ‘ 0 ‘ 은 여러 값을 여러 줄로 간격 맞춰 출력할 때 사용하는 기능
+  - %x 와 %o에 ‘ # ‘ 을 사용하면 접두사 ‘0x’와 ‘0’가 각각 붙는다
+  - 10진수를 2진수로 출력해줄 수 없기 때문에 메소드 Integer.toBinaryString(binNum)을 사용한다
+    이 메소드는 정수를 2진수로 변환하기 때문에 지시자 %s를 사용한다
+
+
+- 화면에서 입력받기 Scanner()
+
+  - scanner 클래스를 사용하려면 `import java.util.*;` 를 추가해야 한다.
+  - nextLine()이라는 메소드를 호출하면, 입력대기 상태에 있다가 입력을 마치고 '엔터키'를 누르면 입력한 내용이 문자열로 반환된다.
+  - 만일 입력받은 문자열을 숫자로 변환하려면 Integer.parserInt() 라는 메소드를 이용해야한다. 이 메소드는 문자열을 int 타입의 정수로 변환한다.
+  - 만일 문자열을 float타입의 값으로 변환하길 원하면 Float.parserFloat()를 사용해야한다.
+  - Scanner 클래스에는 nextLine() 이나 nextFloat() 같이 변환없이 숫자로 바로 입력받을 수 있는 메소드들이 있고, 이 메소드들을 사용하면 문자열을 숫자로 변환하는 수고는 하지 않아도 된다.
+
+    ~~~java
+    int num = scanner.nextLine(); // 정수를 입력받아서 변수 num에 저장
+    ~~~
+
+    - 이 메소드들은 화면에서 연속적으로 값을 입력받아서 사용하기에 까다롭다.
+    - 차라리 모든 값을 nextLine()으로 입력 받아서 적절히 변환하는 것이 더 낫다.
